@@ -30,4 +30,5 @@ public class Shoes {
     @Column(name = "price", nullable = false)
     private double price;
 
+
 }
