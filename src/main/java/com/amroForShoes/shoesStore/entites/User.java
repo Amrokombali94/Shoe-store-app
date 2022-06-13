@@ -6,12 +6,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "Users")
+@Table(name = "users")
 
 public class User {
 
@@ -33,4 +32,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(name = "role", nullable = false)
     private Role role;
+
+    @Transient
+    private String token;
 }

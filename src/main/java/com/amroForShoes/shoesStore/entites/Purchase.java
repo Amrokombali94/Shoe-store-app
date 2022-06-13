@@ -4,10 +4,11 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Data
 @Entity
-@Table(name = "Purchases")
+@Table(name = "purchase")
 public class Purchase {
 
     @Id
@@ -29,17 +30,17 @@ public class Purchase {
     @JoinColumn(name = "shoes_id", referencedColumnName = "id", insertable = false, updatable = false)
     private Shoes shoes;
 
-    @Column(name = "product_id", nullable = false)
-    private Long productId;
 
-    @Column(name = "image_source", nullable = false)
-    private String imageSrc;
+
+//    @Column(name = "image_source", nullable = false)
+//    private String imageSrc;
 
     @Column(name = "price", nullable = false)
     private Double price;
 
-    @Column(name = "purchase_time", nullable = false)
-    private LocalDateTime purchaseTime;
+//    @Column(name = "purchase_time", nullable = false)
+//    private LocalDateTime purchaseTime;
 
-
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "shoes")
+//    private Set<Purchase> purchaseList;
 }

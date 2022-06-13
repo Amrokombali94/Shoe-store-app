@@ -6,7 +6,7 @@ public interface PurchaseItem {
 
     String getName();
     Double getPrice();
-    LocalDateTime getPurchaseTime();
+//    LocalDateTime getPurchaseTime();
 
 
 }
